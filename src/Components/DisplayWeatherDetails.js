@@ -55,7 +55,7 @@ function DisplayWeatherDetails(props) {
                                 <img className='TforeCastICon' src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="ImageNhaihai" />
                                 <h2 className='TforeCasttempLabel'>{Math.floor(item.main.temp - 273.15)}<sup>°C</sup></h2>
                             </div>
-                        })               // console.log(data.list[0].dt_txt.split(" ")[0].split("-")[2].slice("1"))
+                        })
                     }
                 </div>
 
