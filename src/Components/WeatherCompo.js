@@ -36,7 +36,7 @@ function WeatherCompo() {
            {
              Number(weatherData?.cod) === 200 ? <>
              {
-                weatherData ? <Suspense fallback={<p className='loader'>Data Is Loading</p>}>
+                weatherData ? <Suspense fallback={<p className='loader'>Data Loading....</p>}>
 
                     <DisplayWeatherDetails value={weatherData} />
 

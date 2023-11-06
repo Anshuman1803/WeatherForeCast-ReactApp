@@ -305,6 +305,13 @@ body {
   text-transform: capitalize;
 }
 
+.FullWeatherInfoContainer header {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.434);
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+
 @media screen and (max-width: 970px) {
   .mainContainer .WeatherContainer {
     position: relative;

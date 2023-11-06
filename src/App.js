@@ -1,9 +1,13 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import WeatherCompo from './Components/WeatherCompo';
+import WeatherRoute from './Components/WeatherRoute';
 
 function App() {
   return (
-    <WeatherCompo />
+    <BrowserRouter>
+      <WeatherRoute />
+
+    </BrowserRouter>
   );
 }
 

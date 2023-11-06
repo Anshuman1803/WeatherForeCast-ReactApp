@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function DisplayWeatherDetails(props) {
     const data = props.value;
@@ -72,7 +73,7 @@ function DisplayWeatherDetails(props) {
             <div className="weatherForcastContainer">
                 <h2 className='weatherForecastHeading'>Forecast Information <i className="fa-solid fa-xmark hideButton"></i></h2>
 
-                <div className="forecastBox">
+                <Link className="forecastBox" state={data} to={`/WeatherForeCasting/${data.list[6].dt_txt.split(" ")[0]}`}>
                     <p className="dateLabel">{(data.list[6].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
 
                     <div className="iconDescBox">
@@ -83,9 +84,9 @@ function DisplayWeatherDetails(props) {
                         {Math.floor(data.list[6].main.temp - 273.15)}<sup>°C</sup>
                     </p>
 
-                </div>
+                </Link>
 
-                <div className="forecastBox">
+                <Link className="forecastBox" to={`/WeatherForeCasting/${data.list[14].dt_txt.split(" ")[0]}`}>
                     <p className="dateLabel">{(data.list[14].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
 
                     <div className="iconDescBox">
@@ -96,9 +97,9 @@ function DisplayWeatherDetails(props) {
                         {Math.floor(data.list[14].main.temp - 273.15)}<sup>°C</sup>
                     </p>
 
-                </div>
+                </Link>
 
-                <div className="forecastBox">
+                <Link className="forecastBox" to={`/WeatherForeCasting/${data.list[22].dt_txt.split(" ")[0]}`}>
                     <p className="dateLabel">{(data.list[22].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
 
                     <div className="iconDescBox">
@@ -109,9 +110,9 @@ function DisplayWeatherDetails(props) {
                         {Math.floor(data.list[22].main.temp - 273.15)}<sup>°C</sup>
                     </p>
 
-                </div>
+                </Link>
 
-                <div className="forecastBox">
+                <Link className="forecastBox" to={`/WeatherForeCasting/${data.list[30].dt_txt.split(" ")[0]}`}>
                     <p className="dateLabel">{(data.list[30].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
 
                     <div className="iconDescBox">
@@ -122,9 +123,9 @@ function DisplayWeatherDetails(props) {
                         {Math.floor(data.list[30].main.temp - 273.15)}<sup>°C</sup>
                     </p>
 
-                </div>
+                </Link>
 
-                <div className="forecastBox">
+                <Link className="forecastBox" to={`/WeatherForeCasting/${data.list[38].dt_txt.split(" ")[0]}`}>
                     <p className="dateLabel">{(data.list[38].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
 
                     <div className="iconDescBox">
@@ -135,7 +136,7 @@ function DisplayWeatherDetails(props) {
                         {Math.floor(data.list[38].main.temp - 273.15)}<sup>°C</sup>
                     </p>
 
-                </div>
+                </Link>
 
             </div>
 
