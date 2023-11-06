@@ -261,6 +261,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
 }
 .mainContainer .WeatherContainer .weatherForcastContainer .forecastBox .dateLabel {
   height: 100%;
@@ -286,6 +287,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.mainContainer .WeatherContainer .weatherForcastContainer .forecastBox:hover {
+  cursor: pointer;
+  background-color: rgb(11, 19, 30);
+}
+.mainContainer .WeatherContainer .weatherForcastContainer .forecastBox:hover .forecastIcon {
+  scale: 1.2;
 }
 .mainContainer .loader {
   font-size: 40px;

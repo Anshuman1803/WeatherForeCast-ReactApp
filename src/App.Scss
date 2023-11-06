@@ -306,6 +306,8 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                text-decoration: none;
+
 
                 .dateLabel {
                     height: 100%;
@@ -337,6 +339,14 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: rgb(11, 19, 30);
+                }
+                &:hover .forecastIcon{
+                    scale: 1.2;
                 }
             }
 
