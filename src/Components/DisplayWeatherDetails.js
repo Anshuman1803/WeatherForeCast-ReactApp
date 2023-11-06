@@ -2,9 +2,15 @@ import React from 'react'
 
 function DisplayWeatherDetails(props) {
     const data = props.value;
-    console.log(data)
     const newDate = new Date();
     const currentDate = newDate.getDate();
+
+    const handleHideShow = (e) => {
+        let foreCastContainer = document.querySelector(".weatherForcastContainer");
+        let showForeCastBtn = document.querySelector(".showForeCastBtn");
+        foreCastContainer.classList.toggle("activeForeCastContainer");
+        showForeCastBtn.textContent = `${foreCastContainer.classList.contains("activeForeCastContainer") ? "Hide" : 'Show'} Next Five Days Forecast`;
+    }
     return (
         <section className='WeatherContainer'>
             <div className="currentWeatherContainer">
@@ -23,24 +29,24 @@ function DisplayWeatherDetails(props) {
 
                     <div className="infoBox">
                         <p className="infoHeading">Wind Speed</p>
-                        <i className="fa-solid fa-wind"></i>
+                        <i className="fa-solid fa-wind WeatherinfoIcon "></i>
                         <p className='infodata'>{data.list[0].wind.speed} Km/h</p>
                     </div>
 
                     <div className="infoBox">
-                         <p className="infoHeading">Feel Like</p>
+                        <p className="infoHeading">Feel Like</p>
                         <i className="fa-solid fa-temperature-low"></i>
-                         <p className='infodata'>{Math.floor(data.list[0].main.feels_like - 273.15)}<sup>°C</sup></p>
+                        <p className='infodata'>{Math.floor(data.list[0].main.feels_like - 273.15)}<sup>°C</sup></p>
                     </div>
 
                     <div className="infoBox">
-                    <p className="infoHeading">Visibility</p>
+                        <p className="infoHeading">Visibility</p>
                         <i className="fa-solid fa-eye"></i>
-                        <p className='infodata'>{Number(data.list[0].visibility)/1000} Km</p>
+                        <p className='infodata'>{Number(data.list[0].visibility) / 1000} Km</p>
                     </div>
 
                     <div className="infoBox">
-                    <p className="infoHeading">Humidity</p>
+                        <p className="infoHeading">Humidity</p>
                         <i className="fa-solid fa-shower"></i>
                         <p className='infodata'>{data.list[0].main.humidity}%</p>
                     </div>
@@ -59,10 +65,77 @@ function DisplayWeatherDetails(props) {
                     }
                 </div>
 
+                <button className='showForeCastBtn' onClick={handleHideShow}>Show Next Five Days Forecast</button>
+
             </div>
 
             <div className="weatherForcastContainer">
+                <h2 className='weatherForecastHeading'>Forecast Information <i className="fa-solid fa-xmark hideButton"></i></h2>
 
+                <div className="forecastBox">
+                    <p className="dateLabel">{(data.list[6].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
+
+                    <div className="iconDescBox">
+                        <img className='forecastIcon' src={`https://openweathermap.org/img/wn/${data.list[6].weather[0].icon}@2x.png`} alt="ImageNhaihai" />
+                    </div>
+
+                    <p className="foreCastTemp">
+                        {Math.floor(data.list[6].main.temp - 273.15)}<sup>°C</sup>
+                    </p>
+
+                </div>
+
+                <div className="forecastBox">
+                    <p className="dateLabel">{(data.list[14].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
+
+                    <div className="iconDescBox">
+                        <img className='forecastIcon' src={`https://openweathermap.org/img/wn/${data.list[14].weather[0].icon}@2x.png`} alt="ImageNhaihai" />
+                    </div>
+
+                    <p className="foreCastTemp">
+                        {Math.floor(data.list[14].main.temp - 273.15)}<sup>°C</sup>
+                    </p>
+
+                </div>
+
+                <div className="forecastBox">
+                    <p className="dateLabel">{(data.list[22].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
+
+                    <div className="iconDescBox">
+                        <img className='forecastIcon' src={`https://openweathermap.org/img/wn/${data.list[22].weather[0].icon}@2x.png`} alt="ImageNhaihai" />
+                    </div>
+
+                    <p className="foreCastTemp">
+                        {Math.floor(data.list[22].main.temp - 273.15)}<sup>°C</sup>
+                    </p>
+
+                </div>
+
+                <div className="forecastBox">
+                    <p className="dateLabel">{(data.list[30].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
+
+                    <div className="iconDescBox">
+                        <img className='forecastIcon' src={`https://openweathermap.org/img/wn/${data.list[30].weather[0].icon}@2x.png`} alt="ImageNhaihai" />
+                    </div>
+
+                    <p className="foreCastTemp">
+                        {Math.floor(data.list[30].main.temp - 273.15)}<sup>°C</sup>
+                    </p>
+
+                </div>
+
+                <div className="forecastBox">
+                    <p className="dateLabel">{(data.list[38].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
+
+                    <div className="iconDescBox">
+                        <img className='forecastIcon' src={`https://openweathermap.org/img/wn/${data.list[38].weather[0].icon}@2x.png`} alt="ImageNhaihai" />
+                    </div>
+
+                    <p className="foreCastTemp">
+                        {Math.floor(data.list[38].main.temp - 273.15)}<sup>°C</sup>
+                    </p>
+
+                </div>
 
             </div>
 
