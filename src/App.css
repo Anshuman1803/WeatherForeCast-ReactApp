@@ -142,11 +142,11 @@ body {
   display: none;
 }
 .mainContainer .weatherForcastContainer {
-  height: 500px;
+  height: 525px;
   background-color: rgb(32, 43, 59);
   border-radius: 20px;
   width: 25%;
-  padding: 1em 0em;
+  padding: 1em 0.5em;
 }
 .mainContainer .weatherForcastContainer .weatherForecastHeading {
   width: 100%;
@@ -161,7 +161,7 @@ body {
   right: 10px;
 }
 .mainContainer .weatherForcastContainer .forecastBox {
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 0.3em;
   margin: 20px 0px 0px 0px;
   border: 2px solid rgba(255, 255, 255, 0.479);
@@ -207,7 +207,7 @@ body {
 .mainContainer .weatherForcastContainer .forecastBox:hover:before {
   content: "Show";
   background-color: rgba(11, 19, 30, 0.761);
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
