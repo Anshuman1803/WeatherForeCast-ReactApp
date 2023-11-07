@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/App.Scss
+/App.css.map
 /.pnp
 .pnp.js
 

@@ -60,7 +60,7 @@ function WeatherCompo() {
                             </Suspense>
 
                     }
-                </> : <p className="loader">{weatherData?.message} {weatherData?.cod}</p>
+                </> : <p className="errorMessage">{weatherData?.message} {weatherData?.cod}</p>
             }
         </main>
     )
