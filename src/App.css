@@ -138,53 +138,78 @@ body {
   transform: translate(-45%, -50%);
   font-size: 45px;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .currentWeatherInfoContainer {
-  width: 100%;
-  border: 2px solid rgba(255, 255, 255, 0.244);
-  height: 300px;
-  border-radius: 10px;
-  margin: 10px 0px;
-  padding: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  overflow: hidden;
-  overflow-y: auto;
-  gap: 20px;
+.mainContainer .WeatherContainer .showForeCastBtn {
+  display: none;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .currentWeatherInfoContainer .infoBox {
-  border: none;
+.mainContainer .weatherForcastContainer {
+  height: 500px;
+  background-color: rgb(32, 43, 59);
   border-radius: 20px;
-  background-color: rgba(32, 43, 59, 0.651);
-  height: 200px;
-  width: 140px;
+  width: 25%;
+  padding: 1em 0em;
+}
+.mainContainer .weatherForcastContainer .weatherForecastHeading {
+  width: 100%;
+  position: relative;
+  padding: 0em 1em;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.mainContainer .weatherForcastContainer .weatherForecastHeading .hideButton {
+  display: none;
+  position: absolute;
+  right: 10px;
+}
+.mainContainer .weatherForcastContainer .forecastBox {
+  border-radius: 10px;
+  padding: 0.3em;
+  margin: 20px 0px 0px 0px;
+  border: 2px solid rgba(255, 255, 255, 0.479);
+  width: 100%;
+  height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  gap: 5px;
-  transition: all 0.4s ease-in;
+  justify-content: space-between;
+  text-decoration: none;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .currentWeatherInfoContainer .infoBox .infoHeading {
-  font-size: 18px;
-  font-weight: 500;
+.mainContainer .weatherForcastContainer .forecastBox .dateLabel {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 5px;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .currentWeatherInfoContainer .infoBox .infodata {
-  font-size: 20px;
-  font-weight: 700;
+.mainContainer .weatherForcastContainer .forecastBox .iconDescBox {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .currentWeatherInfoContainer .infoBox .WeatherinfoIcon {
-  font-size: 25px;
+.mainContainer .weatherForcastContainer .forecastBox .iconDescBox .forecastIcon {
+  width: 70px;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .currentWeatherInfoContainer .infoBox:hover {
-  cursor: grabbing;
-  border: 1px solid rgba(255, 255, 255, 0.614);
+.mainContainer .weatherForcastContainer .forecastBox .foreCastTemp {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .forCaseHeading {
+.mainContainer .weatherForcastContainer .forecastBox:hover {
+  cursor: pointer;
+  background-color: rgb(11, 19, 30);
+}
+.mainContainer .weatherForcastContainer .forecastBox:hover .forecastIcon {
+  scale: 1.2;
+}
+
+.forCaseHeading {
   margin: 20px 0px 5px 20px;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .todayForcastContainer {
+
+.todayForcastContainer {
   border-radius: 10px;
   background-color: rgb(32, 43, 59);
   margin: 10px 0px;
@@ -199,7 +224,7 @@ body {
   overflow-y: auto;
   gap: 20px;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .todayForcastContainer .TforecastBox {
+.todayForcastContainer .TforecastBox {
   border: none;
   border-left: 2px solid rgba(255, 255, 255, 0.175);
   border-right: 2px solid rgba(255, 255, 255, 0.175);
@@ -212,88 +237,66 @@ body {
   gap: 5px;
   transition: all 0.4s ease-in;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .todayForcastContainer .TforecastBox .TforeCastTime {
+.todayForcastContainer .TforecastBox .TforeCastTime {
   font-size: 16px;
   font-weight: 500;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .todayForcastContainer .TforecastBox .TforeCastICon {
+.todayForcastContainer .TforecastBox .TforeCastICon {
   width: 95px;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .todayForcastContainer .TforecastBox .TforeCasttempLabel {
+.todayForcastContainer .TforecastBox .TforeCasttempLabel {
   font-weight: 700;
   font-size: 20px;
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .todayForcastContainer .TforecastBox:hover {
+.todayForcastContainer .TforecastBox:hover {
   cursor: grab;
   border: 2px solid white;
   border-radius: 20px;
   filter: drop-shadow(-12px 20px 2em tomato);
 }
-.mainContainer .WeatherContainer .currentWeatherContainer .showForeCastBtn {
-  display: none;
-}
-.mainContainer .WeatherContainer .weatherForcastContainer {
-  height: 500px;
-  background-color: rgb(32, 43, 59);
-  border-radius: 20px;
-  width: 25%;
-  padding: 1em 0em;
-}
-.mainContainer .WeatherContainer .weatherForcastContainer .weatherForecastHeading {
+
+.currentWeatherInfoContainer {
   width: 100%;
-  position: relative;
-  padding: 0em 1em;
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.7);
-}
-.mainContainer .WeatherContainer .weatherForcastContainer .weatherForecastHeading .hideButton {
-  display: none;
-  position: absolute;
-  right: 10px;
-}
-.mainContainer .WeatherContainer .weatherForcastContainer .forecastBox {
+  border: 2px solid rgba(255, 255, 255, 0.244);
+  height: 300px;
   border-radius: 10px;
-  padding: 0.3em;
-  margin: 20px 0px 0px 0px;
-  border: 2px solid rgba(255, 255, 255, 0.479);
-  width: 100%;
-  height: 70px;
+  margin: 10px 0px;
+  padding: 1em;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  text-decoration: none;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: hidden;
+  overflow-y: auto;
+  gap: 20px;
 }
-.mainContainer .WeatherContainer .weatherForcastContainer .forecastBox .dateLabel {
-  height: 100%;
-  width: 30%;
+.currentWeatherInfoContainer .infoBox {
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(32, 43, 59, 0.651);
+  height: 200px;
+  width: 140px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  letter-spacing: 5px;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.4s ease-in;
 }
-.mainContainer .WeatherContainer .weatherForcastContainer .forecastBox .iconDescBox {
-  height: 100%;
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.currentWeatherInfoContainer .infoBox .infoHeading {
+  font-size: 18px;
+  font-weight: 500;
 }
-.mainContainer .WeatherContainer .weatherForcastContainer .forecastBox .iconDescBox .forecastIcon {
-  width: 70px;
+.currentWeatherInfoContainer .infoBox .infodata {
+  font-size: 20px;
+  font-weight: 700;
 }
-.mainContainer .WeatherContainer .weatherForcastContainer .forecastBox .foreCastTemp {
-  height: 100%;
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.currentWeatherInfoContainer .infoBox .WeatherinfoIcon {
+  font-size: 25px;
 }
-.mainContainer .WeatherContainer .weatherForcastContainer .forecastBox:hover {
-  cursor: pointer;
-  background-color: rgb(11, 19, 30);
-}
-.mainContainer .WeatherContainer .weatherForcastContainer .forecastBox:hover .forecastIcon {
-  scale: 1.2;
+.currentWeatherInfoContainer .infoBox:hover {
+  cursor: grabbing;
+  border: 1px solid rgba(255, 255, 255, 0.614);
 }
 
 .FullWeatherInfoContainer header {
@@ -301,6 +304,29 @@ body {
   width: 100%;
   height: 80px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.885);
+  gap: 20px;
+}
+.FullWeatherInfoContainer header .AppLogo {
+  width: 70px;
+}
+.FullWeatherInfoContainer .showForeCastBtn {
+  display: block;
+  width: 30%;
+  border: 1px solid white;
+  outline: none;
+  margin: 40px auto 10px auto;
+  padding: 1em;
+  background-color: rgb(11, 19, 30);
+  border-radius: 10px;
+  font-weight: 700;
+}
+.FullWeatherInfoContainer .showForeCastBtn:hover {
+  cursor: pointer;
+  background-color: rgb(32, 43, 59);
 }
 
 .container {
@@ -309,8 +335,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-div.ball {
+.container div.ball {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -319,27 +344,22 @@ div.ball {
   position: relative;
   animation: jump 1s infinite;
 }
-
-div.ball1 {
+.container div.ball1 {
   background-color: white;
 }
-
-div.ball2 {
+.container div.ball2 {
   background-color: white;
   animation-delay: 0.15s;
 }
-
-div.ball3 {
+.container div.ball3 {
   background-color: white;
   animation-delay: 0.3s;
 }
-
-div.ball4 {
+.container div.ball4 {
   background-color: white;
   animation-delay: 0.45s;
 }
-
-div.ball5 {
+.container div.ball5 {
   background-color: white;
   animation-delay: 0.6s;
   margin-right: 10px;
@@ -435,6 +455,15 @@ div.ball5 {
   }
   .mainContainer header .SearchBtn {
     width: 30%;
+  }
+  .FullWeatherInfoContainer header .AppLogo {
+    width: 50px;
+  }
+  .FullWeatherInfoContainer header h1 {
+    font-size: 16px;
+  }
+  .FullWeatherInfoContainer .showForeCastBtn {
+    width: 60%;
   }
 }
 @media screen and (max-width: 400px) {

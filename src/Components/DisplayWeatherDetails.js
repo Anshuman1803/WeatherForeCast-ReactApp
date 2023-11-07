@@ -86,7 +86,7 @@ function DisplayWeatherDetails(props) {
 
                 </Link>
 
-                <Link className="forecastBox" to={`/WeatherForeCasting/${data.list[14].dt_txt.split(" ")[0]}`}>
+                <Link className="forecastBox" state={data} to={`/WeatherForeCasting/${data.list[14].dt_txt.split(" ")[0]}`}>
                     <p className="dateLabel">{(data.list[14].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
 
                     <div className="iconDescBox">
@@ -99,7 +99,7 @@ function DisplayWeatherDetails(props) {
 
                 </Link>
 
-                <Link className="forecastBox" to={`/WeatherForeCasting/${data.list[22].dt_txt.split(" ")[0]}`}>
+                <Link className="forecastBox" state={data} to={`/WeatherForeCasting/${data.list[22].dt_txt.split(" ")[0]}`}>
                     <p className="dateLabel">{(data.list[22].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
 
                     <div className="iconDescBox">
@@ -112,7 +112,7 @@ function DisplayWeatherDetails(props) {
 
                 </Link>
 
-                <Link className="forecastBox" to={`/WeatherForeCasting/${data.list[30].dt_txt.split(" ")[0]}`}>
+                <Link className="forecastBox" state={data} to={`/WeatherForeCasting/${data.list[30].dt_txt.split(" ")[0]}`}>
                     <p className="dateLabel">{(data.list[30].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
 
                     <div className="iconDescBox">
@@ -125,7 +125,7 @@ function DisplayWeatherDetails(props) {
 
                 </Link>
 
-                <Link className="forecastBox" to={`/WeatherForeCasting/${data.list[38].dt_txt.split(" ")[0]}`}>
+                <Link className="forecastBox" state={data} to={`/WeatherForeCasting/${data.list[38].dt_txt.split(" ")[0]}`}>
                     <p className="dateLabel">{(data.list[38].dt_txt.split(" ")[0].split("-").slice(1, 3).reverse().join("/"))}</p>
 
                     <div className="iconDescBox">

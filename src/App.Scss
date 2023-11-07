@@ -153,210 +153,210 @@ body {
                     font-size: 45px;
                 }
             }
-
-            .currentWeatherInfoContainer {
-                width: 100%;
-                border: 2px solid rgba(255, 255, 255, 0.244);
-                height: 300px;
-                border-radius: 10px;
-                margin: 10px 0px;
-                padding: 1em;
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                flex-wrap: wrap;
-                overflow: hidden;
-                overflow-y: auto;
-                gap: 20px;
-
-                .infoBox {
-                    border: none;
-                    border-radius: 20px;
-                    background-color: rgba(32, 43, 59, 0.651);
-                    height: 200px;
-                    width: 140px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-evenly;
-                    flex-direction: column;
-                    gap: 5px;
-                    transition: all 0.4s ease-in;
-
-                    .infoHeading {
-                        font-size: 18px;
-                        font-weight: 500;
-                    }
-
-                    .infodata {
-                        font-size: 20px;
-                        font-weight: 700;
-                    }
-
-                    .WeatherinfoIcon {
-                        font-size: 25px;
-                    }
-
-                    &:hover {
-                        cursor: grabbing;
-                        border: 1px solid rgba(255, 255, 255, 0.614);
-
-
-                    }
-
-                }
-
-            }
-
-            .forCaseHeading {
-                margin: 20px 0px 5px 20px;
-            }
-
-            .todayForcastContainer {
-                border-radius: 10px;
-                background-color: rgb(32, 43, 59);
-                margin: 10px 0px;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                flex-wrap: wrap;
-                padding: 1em;
-                height: 250px;
-                overflow: hidden;
-                overflow-y: auto;
-
-                gap: 20px;
-
-                .TforecastBox {
-                    border: none;
-                    border-left: 2px solid rgba(255, 255, 255, 0.175);
-                    border-right: 2px solid rgba(255, 255, 255, 0.175);
-                    height: 200px;
-                    width: 140px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    gap: 5px;
-                    transition: all 0.4s ease-in;
-
-                    .TforeCastTime {
-                        font-size: 16px;
-                        font-weight: 500;
-
-                    }
-
-                    .TforeCastICon {
-                        width: 95px;
-
-                    }
-
-                    .TforeCasttempLabel {
-                        font-weight: 700;
-                        font-size: 20px;
-
-                    }
-
-                    &:hover {
-                        cursor: grab;
-                        border: 2px solid white;
-                        border-radius: 20px;
-                        filter: drop-shadow(-12px 20px 2em tomato);
-
-
-                    }
-                }
-            }
-
-            .showForeCastBtn {
-                display: none;
-
-            }
-
         }
 
-        .weatherForcastContainer {
-            height: 500px;
-            background-color: rgb(32, 43, 59);
-            border-radius: 20px;
-            width: 25%;
-            padding: 1em 0em;
-
-            .weatherForecastHeading {
-                width: 100%;
-                position: relative;
-                padding: 0em 1em;
-                font-size: 20px;
-                color: rgba(255, 255, 255, 0.7);
-
-                .hideButton {
-                    display: none;
-                    position: absolute;
-                    right: 10px;
-                }
-            }
-
-            .forecastBox {
-                border-radius: 10px;
-                padding: 0.3em;
-                margin: 20px 0px 0px 0px;
-                border: 2px solid rgba(255, 255, 255, 0.479);
-                width: 100%;
-                height: 70px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                text-decoration: none;
-
-
-                .dateLabel {
-                    height: 100%;
-                    width: 30%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    letter-spacing: 5px;
-                }
-
-                .iconDescBox {
-                    height: 100%;
-                    width: 30%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-
-                    .forecastIcon {
-                        width: 70px;
-                    }
-
-
-                }
-
-                .foreCastTemp {
-                    height: 100%;
-                    width: 30%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                &:hover {
-                    cursor: pointer;
-                    background-color: rgb(11, 19, 30);
-                }
-
-                &:hover .forecastIcon {
-                    scale: 1.2;
-                }
-            }
+        .showForeCastBtn {
+            display: none;
 
         }
 
     }
 
+    .weatherForcastContainer {
+        height: 500px;
+        background-color: rgb(32, 43, 59);
+        border-radius: 20px;
+        width: 25%;
+        padding: 1em 0em;
+
+        .weatherForecastHeading {
+            width: 100%;
+            position: relative;
+            padding: 0em 1em;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.7);
+
+            .hideButton {
+                display: none;
+                position: absolute;
+                right: 10px;
+            }
+        }
+
+        .forecastBox {
+            border-radius: 10px;
+            padding: 0.3em;
+            margin: 20px 0px 0px 0px;
+            border: 2px solid rgba(255, 255, 255, 0.479);
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+
+
+            .dateLabel {
+                height: 100%;
+                width: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 5px;
+            }
+
+            .iconDescBox {
+                height: 100%;
+                width: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                .forecastIcon {
+                    width: 70px;
+                }
+
+
+            }
+
+            .foreCastTemp {
+                height: 100%;
+                width: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(11, 19, 30);
+            }
+
+            &:hover .forecastIcon {
+                scale: 1.2;
+            }
+        }
+
+    }
 
 }
+
+.forCaseHeading {
+    margin: 20px 0px 5px 20px;
+}
+
+.todayForcastContainer {
+    border-radius: 10px;
+    background-color: rgb(32, 43, 59);
+    margin: 10px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1em;
+    height: 250px;
+    overflow: hidden;
+    overflow-y: auto;
+
+    gap: 20px;
+
+    .TforecastBox {
+        border: none;
+        border-left: 2px solid rgba(255, 255, 255, 0.175);
+        border-right: 2px solid rgba(255, 255, 255, 0.175);
+        height: 200px;
+        width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+        transition: all 0.4s ease-in;
+
+        .TforeCastTime {
+            font-size: 16px;
+            font-weight: 500;
+
+        }
+
+        .TforeCastICon {
+            width: 95px;
+
+        }
+
+        .TforeCasttempLabel {
+            font-weight: 700;
+            font-size: 20px;
+
+        }
+
+        &:hover {
+            cursor: grab;
+            border: 2px solid white;
+            border-radius: 20px;
+            filter: drop-shadow(-12px 20px 2em tomato);
+
+
+        }
+    }
+}
+
+
+.currentWeatherInfoContainer {
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.244);
+    height: 300px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: auto;
+    gap: 20px;
+
+    .infoBox {
+        border: none;
+        border-radius: 20px;
+        background-color: rgba(32, 43, 59, 0.651);
+        height: 200px;
+        width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 5px;
+        transition: all 0.4s ease-in;
+
+        .infoHeading {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .infodata {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .WeatherinfoIcon {
+            font-size: 25px;
+        }
+
+        &:hover {
+            cursor: grabbing;
+            border: 1px solid rgba(255, 255, 255, 0.614);
+
+
+        }
+
+    }
+}
+
+
 
 .FullWeatherInfoContainer {
     header {
@@ -364,8 +364,37 @@ body {
         width: 100%;
         height: 80px;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.885);
+        gap: 20px;
+
+        .AppLogo {
+            width: 70px;
+        }
     }
+    .showForeCastBtn {
+        display: block;
+        width: 30%;
+        border: 1px solid white;
+        outline: none;
+        margin: 40px auto 10px auto;
+        padding: 1em;
+        background-color: rgb(11, 19, 30);
+        border-radius: 10px;
+        font-weight: 700;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(32, 43, 59);
+        }
+
+    }
+
 }
+
+
 
 
 
@@ -374,41 +403,42 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
 
-div.ball {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-left: 10px;
-    display: inline-block;
-    position: relative;
-    animation: jump 1s infinite;
-}
+    div.ball {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 10px;
+        display: inline-block;
+        position: relative;
+        animation: jump 1s infinite;
+    }
 
-div.ball1 {
-    background-color: white;
-}
+    div.ball1 {
+        background-color: white;
+    }
 
-div.ball2 {
-    background-color: white;
-    animation-delay: 0.15s;
-}
+    div.ball2 {
+        background-color: white;
+        animation-delay: 0.15s;
+    }
 
-div.ball3 {
-    background-color: white;
-    animation-delay: 0.3s;
-}
+    div.ball3 {
+        background-color: white;
+        animation-delay: 0.3s;
+    }
 
-div.ball4 {
-    background-color: white;
-    animation-delay: 0.45s;
-}
+    div.ball4 {
+        background-color: white;
+        animation-delay: 0.45s;
+    }
 
-div.ball5 {
-    background-color: white;
-    animation-delay: 0.6s;
-    margin-right: 10px;
+    div.ball5 {
+        background-color: white;
+        animation-delay: 0.6s;
+        margin-right: 10px;
+    }
+
 }
 
 @keyframes jump {
@@ -543,6 +573,22 @@ div.ball5 {
 
         }
     }
+
+    .FullWeatherInfoContainer {
+        header {
+            .AppLogo {
+                width: 50px;
+            }
+            h1{
+                font-size: 16px;
+            }
+        }
+        .showForeCastBtn {
+            width: 60%;
+        }
+    
+    }
+    
 }
 
 @media screen and (max-width:400px) {
