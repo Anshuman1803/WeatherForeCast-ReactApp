@@ -471,6 +471,9 @@ body {
   .FullWeatherInfoContainer header h1 {
     font-size: 16px;
   }
+  .FullWeatherInfoContainer .currentWeatherInfoContainer, .FullWeatherInfoContainer .todayForcastContainer {
+    height: 550px;
+  }
   .FullWeatherInfoContainer .showForeCastBtn {
     width: 60%;
   }

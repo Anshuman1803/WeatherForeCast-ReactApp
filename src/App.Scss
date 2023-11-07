@@ -591,6 +591,9 @@ body {
                 font-size: 16px;
             }
         }
+        .currentWeatherInfoContainer , .todayForcastContainer{
+            height: 550px;
+        }
         .showForeCastBtn {
             width: 60%;
         }
