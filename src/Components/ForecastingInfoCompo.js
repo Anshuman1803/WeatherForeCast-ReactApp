@@ -6,7 +6,6 @@ function ForecastingInfoCompo() {
   let navigateToHome = useNavigate();
   let currentDate = useParams().Date;
   let filteredData = useLocation().state?.list.filter((item) => item.dt_txt.split(" ")[0] === currentDate)
-  console.log(filteredData)
   return (
     <section className='FullWeatherInfoContainer'>
       <header>

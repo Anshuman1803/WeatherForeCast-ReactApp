@@ -5,6 +5,7 @@ function DisplayWeatherDetails(props) {
     const data = props.value;
     const newDate = new Date();
     const currentDate = newDate.getDate();
+    const filteredData = data.list.filter((item, index) => Number(item.dt_txt.split(" ")[0].split("-")[2])=== Number(currentDate));
 
     const handleHideShow = (e) => {
         let foreCastContainer = document.querySelector(".weatherForcastContainer");
@@ -56,13 +57,13 @@ function DisplayWeatherDetails(props) {
                 <h3 className='forCaseHeading'>Today's Forcast</h3>
                 <div className="todayForcastContainer">
                     {
-                        data.list.filter((item, index) => Number(item.dt_txt.split(" ")[0].split("-")[2].slice("1")) === Number(currentDate)).map((item, index) => {
+                        filteredData.length > 0 ?filteredData.map((item, index) => {
                             return <div className="TforecastBox" key={index}>
                                 <p className="TforeCastTime">{(item.dt_txt.split(" ")[1])}</p>
                                 <img className='TforeCastICon' src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="ImageNhaihai" />
                                 <h2 className='TforeCasttempLabel'>{Math.floor(item.main.temp - 273.15)}<sup>°C</sup></h2>
                             </div>
-                        })
+                        }):<p>There is No Data</p>
                     }
                 </div>
 
